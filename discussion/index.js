@@ -133,12 +133,3 @@ function accessElementsInString() {
 	}
 
 }
-
-
-
-
-
-
-
-
-
