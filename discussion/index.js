@@ -59,3 +59,46 @@ function countUsingDoWhile() {
 			} while (indexStart <= number);
 	}
 }
+
+// [SECTION] For Loop
+
+// syntax: for (initialization; expression/condition; finalExpression/iteration) {
+// 	// statement of procedures
+// }
+
+// TASK: Count to a series of number depending on the value inserted by the user
+function countUsingForLoop() {
+
+	// get the input from the user first using DOM selector.
+	let data = document.getElementById('task3').value;
+
+	let res = document.getElementById('response');
+	// validate if the value of the data is what we desire.
+	if (data <= 0) {
+		// notify the user
+		res.innerHTML = 'Input Invalid';
+	
+	} else {
+			// initialization; condition; iteration/finalExp
+			for (let startCount = 0; startCount <= data; startCount++) {
+				// since the start of the count started with 0, then for every iteration, we should add a value of 1 to eventually meet the condition and terminate the process.
+				// describe what will happen per iteration
+				alert('This is the value in this iteration: ' + startCount); //print out each value of each iteration before the process terminates.
+
+			}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
