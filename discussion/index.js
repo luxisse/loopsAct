@@ -84,15 +84,55 @@ function countUsingForLoop() {
 				// since the start of the count started with 0, then for every iteration, we should add a value of 1 to eventually meet the condition and terminate the process.
 				// describe what will happen per iteration
 				alert('This is the value in this iteration: ' + startCount); //print out each value of each iteration before the process terminates.
-
 			}
 	}
 
 }
 
+// [SECTION] How to access elements of a string using repetition control structures.
 
 
 
+function accessElementsInString() {
+	// get the input of the user using DOM selectors.
+	let name = document.getElementById('userName').value;
+	
+	let textLength = document.getElementById('stringLength');
+	// alert(typeof name); this is just a checker
+
+	// validate and make sure that the input is NOT equivalent to blank.
+	if (name !== '') {
+		// response if truthy (valid)
+
+		// Analyze the value that will be inserted by the user.
+			// 1. determine the length of the string.
+				// => invoke the "length" property of a string using (.) notation.
+
+		textLength.innerHTML = 'The string is ' + name.length + ' characters long';
+
+		// Upon accessing elements inside a string, this can be done so, using [] square brackets.
+		// keep in mind we can access each element through the use of its index number/count
+		// the count will start from 0 (first character inside the string corresponds to the number 0), the next is 1 and up to the "nth" number
+			// console.log(name[0]);
+			// console.log(name[1]);
+			// console.log(name[2]);
+			// console.log(name[3]);
+			// console.log(name[4]);
+			// console.log(name[5]);
+			// console.log(name[6]);
+		// we will now use the concept of loops in order to produce a much more flexible response for the user's input
+		// initialization ; condition ; iteration
+		for (let startIndex = 0; startIndex < name.length; startIndex++) {
+			// access each element and display it inside the console
+			alert(name[startIndex]);
+		}
+
+	} else {
+		// response if falsy
+		alert('value is Invalid');
+	}
+
+}
 
 
 
